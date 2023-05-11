@@ -1,4 +1,4 @@
-public abstract class Electrodomestico {
+public abstract class Electrodomestico implements PrecioCalculable{
     // constants
     protected static final double DEF_PRECIOBASE = 100;
     protected static final String DEF_COLOR = "blanco";
@@ -61,7 +61,8 @@ public abstract class Electrodomestico {
         }
         this.color = DEF_COLOR;
     }
-    public double precioFinal(){
+    @Override
+    public double calcPrecioFinal(){
         double precioAñadido = 0;
         switch (consumoEnergetico){
             case 'A':
