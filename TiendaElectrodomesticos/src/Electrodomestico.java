@@ -40,6 +40,10 @@ public abstract class Electrodomestico implements PrecioCalculable{
     }
 
     //methods
+    /**
+     * Description: Método para comprobar el consumo energético dependiendo del nivel de consumo
+     * @param letra -> Corresponde a la letra que indica el nivel de consumo.
+     * */
     private void comprobarConsumoEnergetico(char letra){
         char[] nivelesConsumo = {'A', 'B', 'C', 'D', 'E', 'F'};
         for (char nivel : nivelesConsumo) {
@@ -50,6 +54,11 @@ public abstract class Electrodomestico implements PrecioCalculable{
         }
         this.consumoEnergetico = DEF_CONSUMOENERGETICO;
     }
+    /**
+     * Description: Método para comprobar que el color esté en la lista válida de colores
+     * (blanco, negro, rojo, azul, gris)
+     * @param color -> Color a asignar.
+     * */
     private void comprobarColor(String color){
         String[] colores = {"blanco", "negro", "rojo", "azul", "gris"};
         String lowerColor = color.toLowerCase();
