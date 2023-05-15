@@ -22,8 +22,8 @@ public class Television extends Electrodomestico{
 
     // methods
     @Override
-    public double precioFinal(){
-        double precioAñadido = super.precioFinal();
+    public double calcPrecioFinal(){
+        double precioAñadido = super.calcPrecioFinal();
         if(pulgadas > 40){
             precioAñadido += precioBase * 0.3;
         }

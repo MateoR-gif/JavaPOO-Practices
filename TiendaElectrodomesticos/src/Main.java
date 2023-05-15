@@ -18,11 +18,11 @@ public class Main {
         for (Electrodomestico electrodomestico: electrodomesticos) {
             if(electrodomestico instanceof Lavadora){
                 sumaLavadoras += 1;
-                sumaPrecioLavadoras += electrodomestico.precioFinal();
+                sumaPrecioLavadoras += electrodomestico.calcPrecioFinal();
             }
             if(electrodomestico instanceof Television){
                 sumaTelevisores += 1;
-                sumaPrecioTelevisores += electrodomestico.precioFinal();
+                sumaPrecioTelevisores += electrodomestico.calcPrecioFinal();
             }
         }
 
